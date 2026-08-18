@@ -1,0 +1,338 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: black;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+/* ////// سکشن اصلی ///// */
+#page {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+/* /////ویدیو ها///// */
+.video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.9s ease;
+}
+#video1 {
+    opacity: 1;
+}
+#video2 {
+    opacity: 0;
+}
+#video3 {
+    opacity: 0;
+}
+#video4 {
+    opacity: 0;
+}
+#video5 {
+    opacity: 0;
+}
+#video6 {
+    opacity: 0;
+}
+#video7 {
+    opacity: 0;
+}
+#video8 {
+    opacity: 0;
+}
+#video9 {
+    opacity: 0;
+}
+#video10 {
+    opacity: 0;
+}
+ /* /////منوی ویدیو اول ///////// */
+#menu {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 35px;
+    transition: opacity 0.8s ease, transform 0.8s ease;
+    z-index: 10;
+    >a{
+    color: white;
+    text-decoration: none;
+    font-size: 23px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    font-family: Arial, sans-serif;
+    margin-top: -80px;
+    }
+}
+ /* /////متن ویدیو اول/////// */
+#scroll {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translateX(-50%);
+    color: white;
+    font-size: 15px;
+    transition:opacity 0.8s ease, transform 0.8s ease;
+    z-index: 10;
+}
+ /* // متن ویدیو سه ////////// */
+#aboutText {
+    position: absolute;
+    top: 35%;
+    right: 70px;
+    width: 420px;
+    color: white;
+    opacity: 0;
+    transform: translateX(40px);
+    transition: opacity 0.9s ease, transform 0.9s ease;
+    pointer-events: none;
+    z-index: 5;
+    >p{
+     font-family: "Outfit", sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: -0.011em;
+    color: white;
+    margin-left: -120px;
+    margin-top: -20px;
+    }
+}
+ /* /// سه تا عکس پایین ////////// */
+#social {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    z-index: 30;
+}
+
+#sound {
+    border: 0;
+    background: none;
+    cursor: pointer;
+}
+#sound.off {
+    opacity: 0.35;
+}
+#sound img {
+    width: 48px;
+}
+ /* /// جدول روی ویدیو ده ////////// */
+#contactSection {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 20;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.4s ease;
+}
+/* ////////وقتی فعال بشه ////////// */
+#contactSection.active {
+    opacity: 1;
+}
+.contactBox {
+    width: 55%;
+    padding: 30px 45px;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    color: white;
+    text-align: center;
+    font-family: "Outfit", sans-serif;
+    >h2{
+     margin-bottom: 15px;
+    font-size: 25px;
+    letter-spacing: 8px;
+    }
+    >p{
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+
+    }
+}
+
+.contactInfo {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 25px;
+    >div{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    }
+    >span{
+        font-size: 14px;
+    }
+    >strong{
+       font-size: 16px;
+    }
+}
+
+.contactInputs {
+    width: 55%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Outfit", sans-serif;
+}
+.inputRow {
+    display: flex;
+    gap: 30px;
+}
+.contactInput {
+    flex: 1;
+    min-height: 55px;
+    padding: 16px 25px;
+    display: flex;
+    align-items: center;
+    color: white;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+.contactButton,
+.meetingButton {
+    min-height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255,255,255,0.45);
+    border-radius: 20px;
+    background: rgba(255,255,255,0.12);
+    color: white;
+    font-weight: 600;
+    letter-spacing: 5px;
+}
+.meetingButton {
+    background: rgba(70,130,220,0.75);
+}
+ /* ////////////فورتمممم //////////// */
+.footer {
+    width: 100%;
+    min-height: 75vh;
+    background: #2c2c2c;
+    color: white;
+    font-family: "Outfit", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footerBox {
+    width: 60%;
+    min-height: 50vh;
+    padding: 50px;
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 25px;
+    background: linear-gradient(135deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03) );
+    box-shadow: 0 20px 60px rgba(0,0,0,0.4);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+.footerProfile {
+    text-align: center;
+    min-width: 180px;
+    >img{
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid rgba(255,255,255,0.8);
+    margin-bottom: 15px;
+    }
+    >h2{
+    font-size: 23px;
+    margin: 0;
+    }
+    >p{
+    margin-top: 7px;
+    font-size: 15px;
+    color: #9fc4dc;
+    }
+}
+.footerAbout {
+    max-width: 400px;
+    >p{
+    font-size: 15px;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.7);
+    }
+}
+.footerAbout h3,
+.footerContact h3 {
+    font-size: 16px;
+    letter-spacing: 3px;
+    color: #a8cde3;
+    margin-bottom: 15px;
+}
+.footerContact {
+    min-width: 180px;
+}
+.footerLinks {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    >a{
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    transition: 0.3s;
+    }
+}
+.footerLinks a:hover {
+    color: white;
+    transform: translateX(5px);
+}
+.footerIcon {
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    color: white;
+}
+.footerIcon svg {
+    width: 17px;
+    height: 17px;
+    fill: none;
+    stroke: white;
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
